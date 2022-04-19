@@ -4,46 +4,218 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Image Gallery</title>
 </head>
 <body>
-    <div id="selector">
-        <h1>Image Gallery</h1>
-        <p>Click on an image to expand, or select a campaign from the navigation below to change the art series.</p>
-        <ul id="nav">
-            <li><a href="index.html">World Turtle Series</a></li>
-            <li><a href="faces.html">Faces Series</a></li>
-            <li><a href="city.html">Cityscapes</a></li>
-        </ul>
-    </div>
-    <!-- Image icons; each image expands into the container below when clicked. -->
-    <div = id="gallery">
-        <div class="row">
-            <div class="column">
-              <img src="images/turtle1.png" alt="Rear Shell" style="width:100%" onclick="myFunction(this);">
+    <div class="jumbotron jumbotron-fluid justify-content-center">
+        <h1 class="title">Face Gallery</h1>
+      </div>
+
+    <div class="container">    
+        <nav class="navbar navbar-expand-md">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="navbar-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="navbar-item"><a href="#" class="nav-link">Gallery</a></li>
+                <li class="navbar-item"><a href="#" class="nav-link">Projects</a></li>
+                <li class="navbar-item"><a href="#" class="nav-link">Links</a></li>
+            </ul>
             </div>
-            <div class="column">
-                <img src="images/turtle2.png" alt="Left Foot" style="width:100%" onclick="myFunction(this);">
-            </div>
-            <div class="column">
-              <img src="images/turtle3.png" alt="Tail Valley" style="width:100%" onclick="myFunction(this);">
-            </div>
-            <div class="column">
-              <img src="images/turtle4.png" alt="Upper Shell" style="width:100%" onclick="myFunction(this);">
-            </div>
-            <div class="column">
-              <img src="images/turtle5.png" alt="Hollow Shell" style="width:100%" onclick="myFunction(this);">
-            </div>
-          </div>
-        <!-- Container for the clicked image. -->
+
+        </nav>
         <div class="container">
-            <span onclick="this.parentElement.style.display='none'" class="close">&times;</span>
-            <img id="expandedImg" style="width:100%">
-            <div id="imgtext"></div>
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#wave1">Wave1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#wave2">Wave2</a>
+                </li>
+            </ul>   
+        </div>
+    <div class="tab-content">
+        <div class="tab-pane active disable-dbl-tap-zoom" id="wave1">
+            <div class="row">
+            <div class="col-md-3"><img src="images/face1.png" alt="Faces Series #1" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(1)"><p class="overlayText">Faces Series #1</p></div></div><span class="imgBlurb">This piece is titled Eggplant. Conceptual Piece part of the Faces series. </span>        
+            <div class="col-md-3"><img src="images/face2.png" alt="Faces Series #2" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(2)"><p class="overlayText">Faces Series #2</p></div></div><span class="imgBlurb">This piece is titled Astraeus. Conceptual Piece part of the Faces series. </span>
+            <div class="col-md-3"><img src="images/face3.png" alt="Faces Series #3" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(3)"><p class="overlayText">Faces Series #3</p></div></div><span class="imgBlurb">This piece is titled Saturn. Conceptual Piece part of the Faces series. </span>
+            <div class="col-md-3"><img src="images/face4.png" alt="Faces Series #4" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(4)"><p class="overlayText">Faces Series #4</p></div></div><span class="imgBlurb">This piece is titled Meteor. Conceptual Piece part of the Faces series. </span>
+            <div class="col-md-3"><img src="images/face5.png" alt="Faces Series #5" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(5)"><p class="overlayText">Faces Series #5</p></div></div><span class="imgBlurb">This piece is titled Sweet Potato. Conceptual Piece part of the Faces series. </span>
+            <div class="col-md-3"><img src="images/face6.png" alt="Faces Series #6" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(6)"><p class="overlayText">Faces Series #6</p></div></div><span class="imgBlurb">This piece is titled Grass. Conceptual Piece part of the Faces series.  </span>
+            <div class="col-md-3"><img src="images/face7.png" alt="Downtown Cityscape" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(7)"><p class="overlayText">Downtown Cityscape</p></div></div><span class="imgBlurb">A cityscape depicting the illustrious nightlife of a fictional downtown locale. </span>
+            <div class="col-md-3"><img src="images/face8.png" alt="Stargazing Cityscape" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(8)"><p class="overlayText">Mania Series #3</p></div></div><span class="imgBlurb">A cityscape depicting a stargazer at a nearby beach. The cityscape takes heavy inspiration from the Downtown West Palm Beach skyline. </span>
+            <div class="col-md-3"><img src="images/face9.png" alt="World Turtle Series #1" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(9)"><p class="overlayText">World Turtle Series #1</p></div></div><span class="imgBlurb">Concept series about life aback a planet sized turtle. Here, a traveler is depicted looking among the Majenta Plains on the turtles back. The turtles head is visible here.</span>
+            <div class="col-md-3"><img src="images/face10.png" alt="World Turtle Series #2" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(10)"><p class="overlayText">World Turtle Series #2</p></div></div><span class="imgBlurb">Part of the World Turtle series, this piece takes us to the Turtles left foot, with the right foot visible in the distance. This location is called Palisades Complex. </span> 
+            <div class="col-md-3"><img src="images/face11.png" alt="World Turtle Series #3" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(11)"><p class="overlayText">World Turtle Series #3</p></div></div><span class="imgBlurb">This piece takes us to the Turtles tail, in an area called Spiral Valley. Pack a jacket, this valley environment is freezing cold!</span>
+            <div class="col-md-3"><img src="images/face12.png" alt="World Turtle Series #4" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(12)"><p class="overlayText">World Turtle Series #4</p></div></div><span class="imgBlurb">This is Winter Hills, the highest point on the Turtles Back. None of the Turtles features are visible here besides the endless mountain range. </span>
+            <div class="col-md-3"><img src="images/face13.png" alt="World Turtle Series #5" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(13)"><p class="overlayText">World Turtle Series #5</p></div></div><span class="imgBlurb">Located within a hollow region of the Turtles Shell lies a city called Magic Sky. Here, the traveler is looking toward the city from a local park. </span>
+            <div class="col-md-3"><img src="images/face14.png" alt="Mania Series #1" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(14)"><p class="overlayText">Mania Series #1</p></div></div><span class="imgBlurb">The Mania series is based on the 2017 hit game Sonic Mania. This piece depicts Act 2 of the Stuidiopolis Stage. </span>
+            <div class="col-md-3"><img src="images/face15.png" alt="Mania Series #2" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(15)"><p class="overlayText">Mania Series #2</p></div></div><span class="imgBlurb">The Mania series is based on the 2017 hit game Sonic Mania. This piece depicts Act 2 of the Press Garden Stage. </span>
+        </div></div>
+        <div class="tab-pane fade disable-dbl-tap-zoom" id="wave2">  
+            <div class="row">      
+            <div class="col-md-3"><img src="images/face16.png" alt="Mania Series #3" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(16)"><p class="overlayText">Mania Series #3</p></div></div><span class="imgBlurb">The Mania series is based on the 2017 hit game Sonic Mania. This piece depicts Act 2 of the Mirage Saloon Stage. </span>
+            <div class="col-md-3"><img src="images/face17.png" alt="World Turtle Series #5" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(17)"><p class="overlayText">World Turtle Series #5</p></div></div><span class="imgBlurb">Located within a hollow region of the Turtles Shell lies a city called Magic Sky. Here, the traveler is looking toward the city from a local park. </span>
+            <div class="col-md-3"><img src="images/face18.png" alt="Mania Series #1" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(18)"><p class="overlayText">Mania Series #1</p></div></div><span class="imgBlurb">The Mania series is based on the 2017 hit game Sonic Mania. This piece depicts Act 2 of the Stuidiopolis Stage. </span>
+            <div class="col-md-3"><img src="images/face19.png" alt="Mania Series #2" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(19)"><p class="overlayText">Mania Series #2</p></div></div><span class="imgBlurb">The Mania series is based on the 2017 hit game Sonic Mania. This piece depicts Act 2 of the Press Garden Stage. </span>
+            <div class="col-md-3"><img src="images/face20.png" alt="Mania Series #3" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(20)"><p class="overlayText">Mania Series #3</p></div></div><span class="imgBlurb">The Mania series is based on the 2017 hit game Sonic Mania. This piece depicts Act 2 of the Mirage Saloon Stage. </span>
+        </div></div>
+    </div>
+        <!-- Modal -->
+        <div id="myModal" class="modal">
+            <!-- Close Button -->
+            <span onclick="closeModal()" class="close cursor">&times;</span>
+            <!-- Modal Content  -->
+            <div class="modal-content">
+                <div class="mySlide">
+                    <div class="numbersText">1/16</div>
+                    <img src="images/face1.png" alt="" class="modalImg">
+                </div>
+                <div class="mySlide">
+                    <div class="numbersText">2/16</div>
+                    <img src="images/face2.png" alt="" class="modalImg">
+                </div>
+                <div class="mySlide">
+                    <div class="numbersText">3/16</div>
+                    <img src="images/face3.png" alt="" class="modalImg">
+                </div>
+                <div class="mySlide">
+                    <div class="numbersText">4/16</div>
+                    <img src="images/face4.png" alt="" class="modalImg">
+                </div>
+                <div class="mySlide">
+                    <div class="numbersText">5/16</div>
+                    <img src="images/face5.png" alt="" class="modalImg">
+                </div>
+                <div class="mySlide">
+                    <div class="numbersText">6/16</div>
+                    <img src="images/face6.png" alt="" class="modalImg">
+                </div>
+                <div class="mySlide">
+                    <div class="numbersText">7/16</div>
+                    <img src="images/face7.png" alt="" class="modalImg">
+                </div>
+                <div class="mySlide">
+                    <div class="numbersText">8/16</div>
+                    <img src="images/face8.png" alt="" class="modalImg">
+                </div>
+                <div class="mySlide">
+                    <div class="numbersText">9/16</div>
+                    <img src="images/face9.png" alt="" class="modalImg">
+                </div>
+                <div class="mySlide">
+                    <div class="numbersText">10/16</div>
+                    <img src="images/face10.png" alt="" class="modalImg">
+                </div>
+                <div class="mySlide">
+                    <div class="numbersText">11/16</div>
+                    <img src="images/face11.png" alt="" class="modalImg">
+                </div>
+                <div class="mySlide">
+                    <div class="numbersText">12/16</div>
+                    <img src="images/face12.png" alt="" class="modalImg">
+                </div>
+                <div class="mySlide">
+                    <div class="numbersText">13/16</div>
+                    <img src="images/face13.png" alt="" class="modalImg">
+                </div>
+                <div class="mySlide">
+                    <div class="numbersText">14/16</div>
+                    <img src="images/face14.png" alt="" class="modalImg">
+                </div>
+                <div class="mySlide">
+                    <div class="numbersText">15/16</div>
+                    <img src="images/face15.png" alt="" class="modalImg">
+                </div>
+                <div class="mySlide">
+                    <div class="numbersText">16/16</div>
+                    <img src="images/face16.png" alt="" class="modalImg">
+                </div>
+                <div class="mySlide">
+                    <div class="numbersText">16/16</div>
+                    <img src="images/face17.png" alt="" class="modalImg">
+                </div>
+                <div class="mySlide">
+                    <div class="numbersText">16/16</div>
+                    <img src="images/face18.png" alt="" class="modalImg">
+                </div>
+                <div class="mySlide">
+                    <div class="numbersText">16/16</div>
+                    <img src="images/face19.png" alt="" class="modalImg">
+                </div>
+                <div class="mySlide">
+                    <div class="numbersText">16/16</div>
+                    <img src="images/face20.png" alt="" class="modalImg">
+                </div>
+                <!-- Controls  -->
+                <a class="prev" href="#" onclick="plusSlides(-1)">&#10094;</a> 
+                <a class="next" href="#" onclick="plusSlides(1)">&#10095;</a> 
+                <!-- Caption -->
+                <div class="caption-container">
+                    <p id="caption"></p>
+                    <p id="blurb"></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 footer">
+                footer Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque sapiente in accusantium ipsum reiciendis harum dignissimos eaque ad incidunt placeat reprehenderit libero et facere cupiditate enim natus ullam, consequatur aliquam?
+            </div>
         </div>
     </div>
-
-    <script src="script.js"></script>
+    <script>
+        function openModal() {
+            document.getElementById('myModal').style.opacity = "1";
+            document.getElementById('myModal').style.visibility = "visible";
+            document.getElementById('myModal').style.transition = "all .3s"
+        }
+        function closeModal() {
+            document.getElementById('myModal').style.opacity = "0";
+            document.getElementById('myModal').style.visibility = "hidden";
+            document.getElementById('myModal').style.transition = "all .3s"
+        }
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        // Next/Previous controls 
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName('mySlide'); // grab each of the 12 slides making the variable an array
+            var captionText = document.getElementById("caption"); // grab the element container to put the caption text
+            var blurbText = document.getElementById('blurb'); // grab the element container to put the blurb description
+            var altText = document.getElementsByClassName("img"); // grab the alt text from the image 
+            var blurbFull = document.getElementsByClassName('imgBlurb'); // grab the blurb/description 
+            // if n (whatever parameter is passed into the function) is larger than the total amount of slides,
+            // then reset the slide index to 1. This ensures that the modal controls always loop from the 
+            // last image back to the first
+            if (n>slides.length) {
+                slideIndex = 1;
+            }
+            if (n<1) {
+                slideIndex = slides.length;
+            }
+            // a for loop to iterate throught the slides array
+            for(i=0; i<slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+            captionText.innerHTML = altText[slideIndex-1].alt;
+            blurbText.innerHTML = blurbFull[slideIndex-1].innerHTML;
+        }
+        // this function shows the current slide based on the value of n 
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+    </script>
 </body>
 </html>
