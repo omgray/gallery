@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,20 +18,18 @@
       </div>
 
     <div class="container">    
-        <nav class="navbar navbar-expand-md">
+        <nav class="navbar navbar-expand-md navbar-dark" id="navbar">
+            <a class="navbar-brand" href="index.html">Face Gallery</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav ml-auto">
-                <li class="navbar-item"><a href="#" class="nav-link">Home</a></li>
-                <li class="navbar-item"><a href="#" class="nav-link">Gallery</a></li>
-                <li class="navbar-item"><a href="#" class="nav-link">Projects</a></li>
-                <li class="navbar-item"><a href="#" class="nav-link">Links</a></li>
-            </ul>
-            </div>
+                <ul class="navbar-nav">
+                    <li class="navbar-item"><a href="#!" id="about" class="nav-link">About</a></li>
+                    <li class="navbar-item"><a href="http://omgray.co" class="nav-link">omgray.co</a></li>
+                </ul>
+            </nav>
 
-        </nav>
         <div class="container">
             <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item">
@@ -44,31 +43,51 @@
     <div class="tab-content">
         <div class="tab-pane active disable-dbl-tap-zoom" id="wave1">
             <div class="row">
-            <div class="col-md-3"><img src="images/face1.png" alt="#1" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(1)"><p class="overlayText">Faces #1</p></div></div><span class="imgBlurb">Face # 1 <p><a href="images/face1.png" target="_blank">See Full Size</a></p> </span>        
-            <div class="col-md-3"><img src="images/face2.png" alt="#2" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(2)"><p class="overlayText">Faces #2</p></div></div><span class="imgBlurb">Face # 2 <p><a href="images/face2.png" target="_blank">See Full Size</a></p> </span>
-            <div class="col-md-3"><img src="images/face3.png" alt="#3" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(3)"><p class="overlayText">Faces #3</p></div></div><span class="imgBlurb">Face # 3 <p><a href="images/face3.png" target="_blank">See Full Size</a></p> </span>
-            <div class="col-md-3"><img src="images/face4.png" alt="#4" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(4)"><p class="overlayText">Faces #4</p></div></div><span class="imgBlurb">Face # 4 <p><a href="images/face4.png" target="_blank">See Full Size</a></p> </span>
-            <div class="col-md-3"><img src="images/face5.png" alt="#5" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(5)"><p class="overlayText">Faces #5</p></div></div><span class="imgBlurb">Face # 5 <p><a href="images/face5.png" target="_blank">See Full Size</a></p> </span>
-            <div class="col-md-3"><img src="images/face6.png" alt="#6" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(6)"><p class="overlayText">Faces #6</p></div></div><span class="imgBlurb">Face # 6 <p><a href="images/face6.png" target="_blank">See Full Size</a></p> </span>
-            <div class="col-md-3"><img src="images/face7.png" alt="#7" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(7)"><p class="overlayText">Faces #7</p></div></div><span class="imgBlurb">Face # 7 <p><a href="images/face7.png" target="_blank">See Full Size</a></p> </span>
-            <div class="col-md-3"><img src="images/face8.png" alt="#8" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(8)"><p class="overlayText">Faces #8</p></div></div><span class="imgBlurb">Face # 8 <p><a href="images/face8.png" target="_blank">See Full Size</a></p> </span>
-            <div class="col-md-3"><img src="images/face9.png" alt="#9" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(9)"><p class="overlayText">Faces #9</p></div></div><span class="imgBlurb">Face # 9 <p><a href="images/face9.png" target="_blank">See Full Size</a></p> </span>
-            <div class="col-md-3"><img src="images/face10.png" alt="#10" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(10)"><p class="overlayText">Faces #10</p></div></div><span class="imgBlurb">Face # 10 <p><a href="images/face10.png" target="_blank">See Full Size</a></p> </span> 
-            <div class="col-md-3"><img src="images/face11.png" alt="#11" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(11)"><p class="overlayText">Faces #11</p></div></div><span class="imgBlurb">Face # 11 <p><a href="images/face11.png" target="_blank">See Full Size</a></p> </span>
-            <div class="col-md-3"><img src="images/face12.png" alt="#12" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(12)"><p class="overlayText">Faces #12</p></div></div><span class="imgBlurb">Face # 12 <p><a href="images/face12.png" target="_blank">See Full Size</a></p> </span>
-            <div class="col-md-3"><img src="images/face13.png" alt="#13" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(13)"><p class="overlayText">Faces #13</p></div></div><span class="imgBlurb">Face # 13 <p><a href="images/face13.png" target="_blank">See Full Size</a></p> </span>
-            <div class="col-md-3"><img src="images/face14.png" alt="#14" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(14)"><p class="overlayText">Faces #14</p></div></div><span class="imgBlurb">Face # 14 <p><a href="images/face14.png" target="_blank">See Full Size</a></p> </span>
-            <div class="col-md-3"><img src="images/face15.png" alt="#15" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(15)"><p class="overlayText">Faces #15</p></div></div><span class="imgBlurb">Face # 15 <p><a href="images/face15.png" target="_blank">See Full Size</a></p>  </span>
+            <div class="col-md-3"><img src="images/face1.png" alt="#1" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(1)"><p class="overlayText">Faces #1</p></div></div><span class="imgBlurb">Name: Bunfire <br> Element: Fire <br> Likes: Food, hot summer days. <br>Dislikes: Snails and lizards. <p><a href="images/face1.png" target="_blank">See Full Size</a></p> </span>        
+            <div class="col-md-3"><img src="images/face2.png" alt="#2" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(2)"><p class="overlayText">Faces #2</p></div></div><span class="imgBlurb">Name: Spaceface <br> Element: Space <br> Likes: Outer space, planets. <br>Dislikes: Day jobs, taxes.<p><a href="images/face2.png" target="_blank">See Full Size</a></p> </span>
+            <div class="col-md-3"><img src="images/face3.png" alt="#3" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(3)"><p class="overlayText">Faces #3</p></div></div><span class="imgBlurb">Name: Thunderscrap <br> Element: Electric <br> Likes: Stormy weather, the internet, physical training. <br>Dislikes: Standing still, water.<p><a href="images/face3.png" target="_blank">See Full Size</a></p> </span>
+            <div class="col-md-3"><img src="images/face4.png" alt="#4" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(4)"><p class="overlayText">Faces #4</p></div></div><span class="imgBlurb">Name: Photonya <br> Element: Light <br> Likes: Bright lights, glits and glam, fashion. <br>Dislikes: The color grey, plain bagels.<p><a href="images/face4.png" target="_blank">See Full Size</a></p> </span>
+            <div class="col-md-3"><img src="images/face5.png" alt="#5" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(5)"><p class="overlayText">Faces #5</p></div></div><span class="imgBlurb">Name: Spectroy <br> Element: Ghost <br> Likes: Movies, house parties. <br>Dislikes: Random loud noises.<p><a href="images/face5.png" target="_blank">See Full Size</a></p> </span>
+            <div class="col-md-3"><img src="images/face6.png" alt="#6" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(6)"><p class="overlayText">Faces #6</p></div></div><span class="imgBlurb">Name: Atomaria  <br> Element: Subatomic <br> Likes: Formal clothing, eggplant, wine. <br>Dislikes: Long meetings, paperwork.<p><a href="images/face6.png" target="_blank">See Full Size</a></p> </span>
+            <div class="col-md-3"><img src="images/face7.png" alt="#7" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(7)"><p class="overlayText">Faces #7</p></div></div><span class="imgBlurb">Name: Vibrink <br> Element: Dark <br> Likes: Fighting, training, swordsmanship. <br>Dislikes: Losing.<p><a href="images/face7.png" target="_blank">See Full Size</a></p> </span>
+            <div class="col-md-3"><img src="images/face8.png" alt="#8" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(8)"><p class="overlayText">Faces #8</p></div></div><span class="imgBlurb">Name: Idean <br> Element: Electric <br> Likes: Chess, board games, video games. <br>Dislikes: Labor, junk food.<p><a href="images/face8.png" target="_blank">See Full Size</a></p> </span>
+            <div class="col-md-3"><img src="images/face9.png" alt="#9" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(9)"><p class="overlayText">Faces #9</p></div></div><span class="imgBlurb">Name: Aquami <br> Element: Water <br> Likes: The beach, pools, lakes, swimming. <br>Dislikes: Hot, dry and arid areas.<p><a href="images/face9.png" target="_blank">See Full Size</a></p> </span>
+            <div class="col-md-3"><img src="images/face10.png" alt="#10" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(10)"><p class="overlayText">Faces #10</p></div></div><span class="imgBlurb">Name: Chromatose <br> Element: Metal <br> Likes: Firepower, lasers. <br>Dislikes: Sneak attacks, stealth missions.<p><a href="images/face10.png" target="_blank">See Full Size</a></p> </span> 
+            <div class="col-md-3"><img src="images/face11.png" alt="#11" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(11)"><p class="overlayText">Faces #11</p></div></div><span class="imgBlurb">Name: Woodrick <br> Element: Plant <br> Likes: Nature, insects, honey. <br>Dislikes: Buildings, technology.<p><a href="images/face11.png" target="_blank">See Full Size</a></p> </span>
+            <div class="col-md-3"><img src="images/face12.png" alt="#12" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(12)"><p class="overlayText">Faces #12</p></div></div><span class="imgBlurb">Name: Demixx <br> Element: Dark <br> Likes: Horror movies, nighttime, shadows. <br>Dislikes: Bright lights.<p><a href="images/face12.png" target="_blank">See Full Size</a></p> </span>
+            <div class="col-md-3"><img src="images/face13.png" alt="#13" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(13)"><p class="overlayText">Faces #13</p></div></div><span class="imgBlurb">Name: Discipaul <br> Element: Fist <br> Likes: Martial Arts, training, the gym. <br>Dislikes: Luck based games, broccoli.<p><a href="images/face13.png" target="_blank">See Full Size</a></p> </span>
+            <div class="col-md-3"><img src="images/face14.png" alt="#14" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(14)"><p class="overlayText">Faces #14</p></div></div><span class="imgBlurb">Name: Nimbix <br> Element: Sky <br> Likes: Flying, long showers. <br>Dislikes: Dirt, mud, filth.<p><a href="images/face14.png" target="_blank">See Full Size</a></p> </span>
+            <div class="col-md-3"><img src="images/face15.png" alt="#15" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(15)"><p class="overlayText">Faces #15</p></div></div><span class="imgBlurb">Name: Burnice <br> Element: Fire <br> Likes: Music, dancing, campfires. <br>Dislikes: Humid weather, forests.<p><a href="images/face15.png" target="_blank">See Full Size</a></p>  </span>
         </div></div>
         <div class="tab-pane fade disable-dbl-tap-zoom" id="wave2">  
             <div class="row">      
-            <div class="col-md-3"><img src="images/face16.png" alt="#16" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(16)"><p class="overlayText">Faces #16</p></div></div><span class="imgBlurb">Face # 16 <p><a href="images/face16.png" target="_blank">See Full Size</a></p>  </span>
-            <div class="col-md-3"><img src="images/face17.png" alt="#17" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(17)"><p class="overlayText">Faces #17</p></div></div><span class="imgBlurb">Face # 17 <p><a href="images/face17.png" target="_blank">See Full Size</a></p>  </span>
-            <div class="col-md-3"><img src="images/face18.png" alt="#18" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(18)"><p class="overlayText">Faces #18</p></div></div><span class="imgBlurb">Face # 18 <p><a href="images/face18.png" target="_blank">See Full Size</a></p> </span>
-            <div class="col-md-3"><img src="images/face19.png" alt="#19" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(19)"><p class="overlayText">Faces #19</p></div></div><span class="imgBlurb">Face # 19 <p><a href="images/face19.png" target="_blank">See Full Size</a></p> </span>
-            <div class="col-md-3"><img src="images/face20.png" alt="#20" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(20)"><p class="overlayText">Faces #20</p></div></div><span class="imgBlurb">Face # 20 <p><a href="images/face20.png" target="_blank">See Full Size</a></p> </span>
+            <div class="col-md-3"><img src="images/face16.png" alt="#16" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(16)"><p class="overlayText">Faces #16</p></div></div><span class="imgBlurb">Name: Mastarr <br> Element: Fist <br> Likes: Martial Arts, healthy foods. <br>Dislikes: Laziness, excuses.<p><a href="images/face16.png" target="_blank">See Full Size</a></p>  </span>
+            <div class="col-md-3"><img src="images/face17.png" alt="#17" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(17)"><p class="overlayText">Faces #17</p></div></div><span class="imgBlurb">Name: Sadborg <br> Element: Metal <br> Likes: Overthinking, space, learning. <br>Dislikes: Interacting with others.<p><a href="images/face17.png" target="_blank">See Full Size</a></p>  </span>
+            <div class="col-md-3"><img src="images/face18.png" alt="#18" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(18)"><p class="overlayText">Faces #18</p></div></div><span class="imgBlurb">Name: Moltore <br> Element: Rock <br> Likes: Competition, hot summer days, sports. <br>Dislikes: Staying indoors, weak people.<p><a href="images/face18.png" target="_blank">See Full Size</a></p> </span>
+            <div class="col-md-3"><img src="images/face19.png" alt="#19" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(19)"><p class="overlayText">Faces #19</p></div></div><span class="imgBlurb">Name: Priscillice <br> Element: Ice <br> Likes: Ice cream, frozen yogurt, whipped cream. <br>Dislikes: Summer, hot beverages.<p><a href="images/face19.png" target="_blank">See Full Size</a></p> </span>
+            <div class="col-md-3"><img src="images/face20.png" alt="#20" class="img-fluid img"> <div class="overlay" onclick="openModal();currentSlide(20)"><p class="overlayText">Faces #20</p></div></div><span class="imgBlurb">Name: Magmax <br> Element: Electric <br> Likes: Fighting, gang affiliation, magnets. <br>Dislikes: Bugs and spiders.<p><a href="images/face20.png" target="_blank">See Full Size</a></p> </span>
         </div></div>
     </div> 
+    <!-- About -->
+<div id="myModal2" class="modal2">
+
+    <!-- Modal content -->
+    <div class="modal-content2 text-center justify-content-center">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>About Faces</h2>
+      </div>
+      <div class="modal-body justify-content-center text-center">
+        <img src="images/face.gif" alt="" class="gif"> <br> <hr> <br>
+        <p>Faces is an art campaign that has become a passion project to create many imaginative characters from various real concepts. These characters have their own names, stats and lore that you can read here on the Face Gallery.</p> <br>
+        <p>Each Face is custom drawn and no two are alike.</p> <br>
+      </div>
+      <div class="modal-footer">
+        <h3>Modal Footer</h3>
+      </div>
+    </div>
+  
+  </div>
         <!-- Modal -->
         <div id="myModal" class="modal">
             <!-- Close Button -->
@@ -156,8 +175,8 @@
                     <img src="images/face20.png" alt="" class="modalImg">
                 </div>
                 <!-- Controls  -->
-                <a class="prev" href="#" onclick="plusSlides(-1)">&#10094;</a> 
-                <a class="next" href="#" onclick="plusSlides(1)">&#10095;</a> 
+                <a class="prev" href="#!" onclick="plusSlides(-1)">&#10094;</a> 
+                <a class="next" href="#!" onclick="plusSlides(1)">&#10095;</a> 
                 <!-- Caption -->
                 <div class="caption-container">
                     <p id="caption"></p>
@@ -165,10 +184,12 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12 footer">
-                footer Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque sapiente in accusantium ipsum reiciendis harum dignissimos eaque ad incidunt placeat reprehenderit libero et facere cupiditate enim natus ullam, consequatur aliquam?
-            </div>
+        <div class="footer d-block justify-content-center page-content">
+            <p class="foottext">&copy; 2022 omg.ray / Ray Lopez</p> <br>
+            <p class="foottext">Website developed by Ray Lopez. All Faces artwork created and owned by Ray Lopez.</p> <br>
+            <a href="https://github.com/omgray"><i class='fa fa-github' style='font-size:36px;color:white'></i></a>
+            <a href="https://instagram.com/omg.ray"><i class='fa fa-instagram' style='font-size:36px;color:white'></i></a>
+            <a href="https://www.facebook.com/omgraymedia"><i class='fa fa-facebook' style='font-size:36px;color:white'></i></a>
         </div>
     </div>
     <script>
@@ -216,6 +237,28 @@
         function currentSlide(n) {
             showSlides(slideIndex = n);
         }
+
+        // About section modal
+        var about = document.getElementById("myModal2");
+        var link = document.getElementById("about");
+        var span = document.getElementsByClassName("close")[0];
+
+        link.onclick = function() {
+            about.style.display = "block";
+        }
+        span.onclick = function() {
+            about.style.display = "none";
+        }
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == about) {
+                about.style.display = "none";
+            }
+        }
+        document.getElementsByTagName("a").addEventListener("click", function(event){
+            alert("worked");
+            event.preventDefault()
+        });
     </script>
 </body>
 </html>
