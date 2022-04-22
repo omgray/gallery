@@ -1,6 +1,10 @@
 body {
     background-color: #000000;
     color: #ffffff;
+    overflow-x: hidden;
+}
+body.modal-open {
+    overflow: hidden;
 }
 /* Navigation */
 .jumbotron {
@@ -44,7 +48,8 @@ body {
 }
 .navbar-nav {
     list-style-type: none;
-    float: left;
+    float: right;
+    margin: 0 0 0 auto;
 }
 .navbar-item {
     padding: 0rem 1rem;
@@ -55,7 +60,7 @@ body {
 }
 .nav-link:hover {
     background-color: white;
-    color: blueviolet;
+    color: black !important;
 }
 
 /* Page Content  */
@@ -213,3 +218,63 @@ body {
     color: #ffffff;
     padding: 1rem 2rem;
 }
+/* About CSS */
+.modal2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    padding-top: 50px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  .modal-content2 {
+    position: relative;
+    background-color: #1a1a1a;
+    color: white;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  @media screen and (max-width: 700px) {
+    .gif {
+    width: 80%;
+    height: auto;
+    }   
+  }
+  @media screen and (min-width: 700px) {
+    .gif {
+    max-width: 35%;
+    height: auto;
+    }   
+  }
+  
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  i {
+    margin: 0 20px;
+    }
