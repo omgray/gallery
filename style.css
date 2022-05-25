@@ -82,7 +82,6 @@ body.modal-open {
 .img {
     opacity: 1.0;
     transition: 0.3s;
-    /* border-radius: 15px; */
 }
 @media screen and (max-width: 600px) {
     .img {
